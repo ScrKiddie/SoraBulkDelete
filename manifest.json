@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Sora Bulk Deleter",
+  "version": "4.0",
+  "description": "Adds a popup to bulk delete items and clear trash on the Sora library.",
+  "permissions": [
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://sora.chatgpt.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon128.png",
+    "default_title": "Sora Bulk Deleter"
+  },
+  "icons": {
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://sora.chatgpt.com/library*"],
+      "js": ["content.js"]
+    }
+  ]
+}
